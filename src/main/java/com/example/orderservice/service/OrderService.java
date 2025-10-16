@@ -20,8 +20,8 @@ public class OrderService {
 
     public Order createOrder(Order order) {
         double price = switch (order.getProductCode()) {
-            case "P001" -> 100.0;
-            case "P002" -> 200.0;
+            case "P001" -> 200.0;
+            case "P002" -> 450.0;
             default -> throw new RuntimeException("Invalid product code");
         };
 
@@ -31,7 +31,6 @@ public class OrderService {
 
         Order saved = orderRepository.save(order);
 
-        // publish event (simulated)
         eventPublisher.publishOrderCreated(saved);
 
         return saved;
