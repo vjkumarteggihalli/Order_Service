@@ -23,23 +23,24 @@
    * or run `OrderProcessingServiceApplication.java` in your IDE.
 
 3. The service runs on *http://localhost:8080*
-4. Example requests,
-   * Single orders: - POST http://localhost:8080/api/orders
+   4. Example requests,
+      * Single orders: - POST http://localhost:8080/api/orders
 
-                 - Content-Type: application/json
+                    - Content-Type: application/json
 
                 
-                 - "productCode": "P001",
-                   "quantity": 2
-   * Response:
-    ```json{
-  "id": 1,
-  "productCode": "P001",
-  "quantity": 2,
-  "price": 100.0,
-  "status": "CONFIRMED",
-  "createdAt": "2025-10-16T20:30:15"
-  }
+                    - "productCode": "P001",
+                      "quantity": 2
+      * Response:
+      ```json
+         {
+              "id": 1,
+               "productCode": "P001",
+               "quantity": 2,
+               "price": 100.0,
+               "status": "CONFIRMED",
+               "createdAt": "2025-10-16T20:30:15"
+         }
 5. Batch Upload from CSV
    navigate to this link : POST http://localhost:8080/api/orders/batch
    Form-data key → file (type: File) → select orders.csv
