@@ -1,4 +1,5 @@
--------** Order Processing Service : E-Commerce **------
+                            **ORDER PROCESSING SERVICE: E-COMMERCE**
+
 ## Overview ##
 * This is a Spring Boot microservice that handles order processing.  
 * It exposes REST APIs to create single orders, upload batch orders from CSV,  
